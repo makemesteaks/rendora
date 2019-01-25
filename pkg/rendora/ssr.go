@@ -101,7 +101,7 @@ func (R *Rendora) getResponse(url string) (*HeadlessResponse, error) {
 		return resp, nil
 	}
 
-	dt, err := R.getHeadless(url)
+	dt, err := R.getHeadless("http://" + url)
 	if err != nil {
 		return nil, err
 	}
